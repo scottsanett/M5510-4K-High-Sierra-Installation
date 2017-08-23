@@ -7,6 +7,7 @@ The BIOS version for my laptop is 1.12.19, thus no need for OsxAptioFix2Drv-64.e
 
 
 This repo is far from complete. At the current stage:
+
 What Works:
 * Sound card (earplug not tested)
 * Samsung SM951 works out of the box, no NVME kext needed.
