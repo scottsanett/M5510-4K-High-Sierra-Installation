@@ -6,7 +6,7 @@ This repository is based on darkhandz's high sierra repo for XPS15 9550.
 The BIOS version for my laptop is 1.12.19, thus no need for OsxAptioFix2Drv-64.efi, sliding value calculations and the like.
 
 
-This repo is far from complete. At the current stage:
+This repo is far from complete.
 
 ### Working:
 * Sound card (earplug not tested)
