@@ -12,7 +12,7 @@ This repo is far from complete.
 * Sound card (earplug not tested)
 * Samsung SM951 works out of the box, no NVME kext needed.
 * Intel HD530 with 4K display
-* Brightness slider with `AppleBacklightInjector.kext`
+* Brightness tuning with `AppleBacklightInjector.kext`
 
 ### Not Working:
 * FakeSMC sensors, but instead Activity Monitor doesn't crash anymore at Energy tab
