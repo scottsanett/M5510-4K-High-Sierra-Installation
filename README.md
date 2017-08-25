@@ -41,6 +41,6 @@ sudo codesign -f -s - /System/Library/Frameworks/CoreDisplay.framework/Versions/
 ## Application compatibility issues with High Sierra
 * Time Machine works with APFS with no problem (I've migrated pretty much everything from previous backups of 10.12.6 with Migration Assitant)
 * Couldn't copy and paste after the system is installed. The problem went away by itself after a few reboots (Some have suggested that CoreDisplayFixup breaks copy and paste, but the perl script doesn't)
-* iTunes crashes rather frequently for a while. I deleted all iTunes library files (excluding the tracks) and readded all the tracks to the library. Seems like it's fixed now.
+* iTunes crashes frequently, haven't found a fix yet.
 * bartender causes system notification icon crashes
 * CleanMyMac3 doesn't work at all
