@@ -8,12 +8,14 @@ The BIOS version for my laptop is 1.12.19, thus no need for OsxAptioFix2Drv-64.e
 
 This repo is far from complete. At the current stage:
 
-Working:
+### Working:
 * Sound card (earplug not tested)
 * Samsung SM951 works out of the box, no NVME kext needed.
 * Intel HD530 with 4K display
-* Brightness
+* Brightness slider with `AppleBacklightInjector.kext`
 
+### Not Working:
+* FakeSMC sensors, but instead Activity Monitor doesn't crash anymore at Energy tab
 
 Things that are not listed here have not been tested.
 
