@@ -14,6 +14,7 @@ This repo is far from complete.
 * Intel HD530 with 4K display
 * Brightness tuning
 * HWP
+* Thunderbolt hotplug (not very stable)
 
 > For the last two, install the two kexts in POST-INSTALL/LE to /Library/Extensions/ and rebuild kernel cache with `sudo kextcache -i /`
 
