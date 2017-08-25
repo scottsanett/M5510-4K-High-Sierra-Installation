@@ -20,7 +20,7 @@ Things that are not listed here have not been tested.
 
 ##To get HD530 work with 4K:
 1. boot the installer with an invalid ig-platform-id in Clover, e.g. 0x12345678
-2. disable SIP if necessary
+2. after the system is installed, disable SIP if necessary
 3. apply the perl patch
 
 ```
