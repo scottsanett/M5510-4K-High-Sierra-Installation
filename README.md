@@ -42,6 +42,5 @@ sudo codesign -f -s - /System/Library/Frameworks/CoreDisplay.framework/Versions/
 * Time Machine works with APFS with no problem (I've migrated pretty much everything from previous backups of 10.12.6 with Migration Assitant)
 * Couldn't copy and paste for a while after the system is installed. The problem went away by itself after a few reboots (Some have suggested that CoreDisplayFixup breaks copy and paste, but the perl script doesn't)
 * iTunes crashes frequently
-  * it seems that this is caused by me using the resolution of 1920 * 1080 (as opposed to display default) when the system is booted with an invalid ig-platform-id. It has stopped crashing after I changed it back to display default resolution booted with an invalid ig-platform-id and then rebooted with a valid one.
 * bartender causes system notification icon crashes
 * CleanMyMac3 doesn't work at all
