@@ -12,9 +12,9 @@ This repo is far from complete.
 * Built-in speakers, the earplug seems to be working without any ALCPlugFix
 * Samsung SM951 works out of the box, no NVME kext needed.
 * Intel HD530 with 4K display
+* Thunderbolt hotplug (not very stable)
 * Brightness tuning
 * HWP
-* Thunderbolt hotplug (not very stable)
 
 > For the last two, install the two kexts in POST-INSTALL/LE to /Library/Extensions/ and rebuild kernel cache with `sudo kextcache -i /`
 
