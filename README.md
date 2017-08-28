@@ -38,12 +38,10 @@ sudo codesign -f -s - /System/Library/Frameworks/CoreDisplay.framework/Versions/
 
 4. reboot with a valid ig-platform-id in Clover, e.g. 0x191b0000
 
-## Application compatibility issues with High Sierra
+## Issues
 * Time Machine works with APFS with no problem (I've migrated pretty much everything from previous backups of 10.12.6 with Migration Assitant)
 * Couldn't copy and paste for a while after the system is installed. The problem went away by itself after a few reboots (Some have suggested that CoreDisplayFixup breaks copy and paste, but the perl script doesn't)
 * iTunes crashes frequently
   * The crashes are mostly (if not all) segmentation faults
   * The crashes do not happen at all with a fake ig-platform-id
   * The crashes seem to happen more frequently with intelgraphicsfixup.kext
-* bartender causes system notification icon crashes
-* CleanMyMac3 doesn't work at all
