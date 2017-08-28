@@ -44,4 +44,3 @@ sudo codesign -f -s - /System/Library/Frameworks/CoreDisplay.framework/Versions/
 * iTunes crashes frequently
   * The crashes are mostly (if not all) segmentation faults
   * The crashes do not happen at all with a fake ig-platform-id
-  * The crashes seem to happen more frequently with intelgraphicsfixup.kext
