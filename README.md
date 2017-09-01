@@ -1,12 +1,12 @@
 # M5510-4K-High-Sierra-Installation
 
-This repository is based on darkhandz's high sierra repo for XPS15 9550.
+This repository is based on [darkhandz's high sierra repo](https://github.com/darkhandz/XPS15-9550-High-Sierra) for XPS15 9550.
 
 
 The BIOS version for my laptop is 1.3.0 (updated on Aug 28 on Dell's website), thus OsxAptioFix**2**Drv-64.efi and sliding value calculations are needed to boot into the installer and the OS.
 
 
-You may refer to darkhandz's Chinese tutorial for sliding value calculations. I use `slider=168` for High Sierra and `slider=146` for Sierra, the latter of which had to be manually calculated as 168 didn't work.
+You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS15-9550-High-Sierra/blob/master/README.md) for sliding value calculations. I use `slider=168` for High Sierra and `slider=146` for Sierra, the latter of which had to be manually calculated as 168 didn't work.
 
 
 ## The current status:
