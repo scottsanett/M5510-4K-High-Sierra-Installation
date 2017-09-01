@@ -44,6 +44,7 @@ sudo codesign -f -s - /System/Library/Frameworks/CoreDisplay.framework/Versions/
 4. reboot with a valid ig-platform-id in Clover, e.g. `0x191b0000`
 
 ## Issues
+* The filesystem (APFS) could potentially be corrupted during reboots. I've had this happen to me more than a couple of times.
 * Time Machine works with APFS with no problem (I've migrated pretty much everything from previous backups of 10.12.6 with Migration Assitant)
 * The perl script seems to break copy && paste. The problem went away by itself after a few reboots.
 * iTunes crashes frequently
