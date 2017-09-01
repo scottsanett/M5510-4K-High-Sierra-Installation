@@ -3,16 +3,16 @@
 This repository is based on [darkhandz's high sierra repo](https://github.com/darkhandz/XPS15-9550-High-Sierra) for XPS15 9550.
 
 
-The BIOS version for my laptop is 1.3.0 (updated on Aug 28 on Dell's website), thus OsxAptioFix**2**Drv-64.efi and sliding value calculations are needed to boot into the installer and the OS.
+The BIOS version for my laptop is 1.3.0 (updated on Aug 28 on Dell's website), thus OsxAptioFix**2**Drv-64.efi and slider value calculations are needed to boot into the installer and the OS.
 
 
-You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS15-9550-High-Sierra/blob/master/README.md) for sliding value calculations. I use `slider=168` for High Sierra and `slider=146` for Sierra, the latter of which had to be manually calculated as 168 didn't work.
+You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS15-9550-High-Sierra/blob/master/README.md) for calculating slider values. I use `slider=168` for High Sierra and `slider=146` for Sierra; the latter of which had to be manually calculated as 168 didn't work.
 
 
 ## The current status:
 ### Working:
-* Built-in speakers, ALCPlugFix needed for a functioning earplug.
-* Samsung SM951 works out of the box, no NVME kext needed.
+* Built-in speakers, ALCPlugFix needed for a functional headphone jack.
+* Samsung SM951 works out of the box, no NVME kext needed. (See Issues #1)
 * Intel HD530 with 4K display
 * Thunderbolt hotplug (not very stable)
 * Brightness slider && tuning
@@ -64,7 +64,7 @@ fi
 ```
 
 ## Issues
-* The filesystem (APFS) could potentially be corrupted during reboots. I've had this happen to me more than a couple of times. Not sure if it's NVMe related.
-* Time Machine works with APFS with no problem.
-* The perl script seems to break copy && paste. The problem went away by itself after a few reboots.
-* iTunes crashes frequently. The crashes do not happen at all with a fake ig-platform-id.
+1. The filesystem (APFS) could potentially be corrupted during reboots. I've had this happen to me more than a couple of times. Not sure if it's NVMe related.
+2. Time Machine works with APFS with no problem.
+3. The perl script seems to break copy && paste. The problem went away by itself after a few reboots.
+4. iTunes crashes frequently. The crashes do not happen at all with a fake ig-platform-id.
