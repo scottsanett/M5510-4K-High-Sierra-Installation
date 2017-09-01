@@ -3,7 +3,7 @@
 This repository is based on darkhandz's high sierra repo for XPS15 9550.
 
 
-The BIOS version for my laptop is 1.3.0 (updated on Aug 28 on Dell's website), thus OsxAptioFix_2_Drv-64.efi and sliding value calculations are needed to boot into the installer and the OS.
+The BIOS version for my laptop is 1.3.0 (updated on Aug 28 on Dell's website), thus OsxAptioFix**2**Drv-64.efi and sliding value calculations are needed to boot into the installer and the OS.
 
 
 You may refer to darkhandz's Chinese tutorial for sliding value calculations. I use `slider=168` for High Sierra and `slider=146` for Sierra, the latter of which being manually calculated.
