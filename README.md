@@ -11,7 +11,7 @@ You may refer to darkhandz's Chinese tutorial for sliding value calculations. I 
 
 ## The current status:
 ### Working:
-* Built-in speakers, ALCPlugFix needed for functional earplug.
+* Built-in speakers, ALCPlugFix needed for a functioning earplug.
 * Samsung SM951 works out of the box, no NVME kext needed.
 * Intel HD530 with 4K display
 * Thunderbolt hotplug (not very stable)
