@@ -63,8 +63,8 @@ else
 fi
 ```
 
-## Issues <a name="issues"></a>
-1. The filesystem (APFS) could potentially be corrupted during reboots. I've had this happen to me more than a couple of times. Not sure if it's NVMe related.
+## Issues 
+1. The filesystem (APFS) could potentially be corrupted during reboots. I've had this happen to me more than a couple of times. Not sure if it's NVMe related. <a name="issues"></a>
 2. Time Machine works with APFS with no problem.
 3. The perl script seems to break copy && paste. The problem went away by itself after a few reboots.
 4. iTunes crashes frequently. The crashes do not happen at all with a fake ig-platform-id.
