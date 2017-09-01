@@ -12,7 +12,7 @@ You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS
 ## The current status:
 ### Working:
 * Built-in speakers, ALCPlugFix needed for a functional headphone jack.
-* Samsung SM951 works out of the box, no NVME kext needed. (See Issues #1)
+* Samsung SM951 works out of the box, no NVME kext needed. (See [Issues #1](#issues))
 * Intel HD530 with 4K display
 * Thunderbolt hotplug (not very stable)
 * Brightness slider && tuning
@@ -63,7 +63,7 @@ else
 fi
 ```
 
-## Issues
+## Issues <a name="issues"></a>
 1. The filesystem (APFS) could potentially be corrupted during reboots. I've had this happen to me more than a couple of times. Not sure if it's NVMe related.
 2. Time Machine works with APFS with no problem.
 3. The perl script seems to break copy && paste. The problem went away by itself after a few reboots.
