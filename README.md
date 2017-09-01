@@ -48,7 +48,7 @@ sudo codesign -f -s - /System/Library/Frameworks/CoreDisplay.framework/Versions/
 > You need to have ALCPlugFix installed first -> See [POST-INSTALL/ALCPlugFix](https://github.com/scottsanett/M5510-4K-High-Sierra-Installation/tree/master/POST-INSTALL/ALCPlugFix)
 1. install sleepwatcher: `brew install sleepwatcher`
 2. start sleepwatcher service: `brew services start sleepwatcher`
-3. create a file named: `.wakeup` under you user home directroy: `touch ~/.wakeup`
+3. create a file named `.wakeup` under you user home directroy: `touch ~/.wakeup`
 4. make the file executable: `chmod +x ~/.wakeup`
 5. add the following lines to the file
 ```
