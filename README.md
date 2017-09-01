@@ -32,7 +32,7 @@ sudo touch /System/Library/Extensions && sudo kextcache -u /
 Things that are not listed here have not been tested.
 
 
-## To get HD530 work with 4K:
+## Fix for 4K:
 1. boot the installer with an invalid ig-platform-id in Clover, e.g. `0x12345678`
 2. after the system is installed, disable SIP if necessary
 3. apply the pixel clock patch below
@@ -42,6 +42,26 @@ sudo codesign -f -s - /System/Library/Frameworks/CoreDisplay.framework/Versions/
 ```
 
 4. reboot with a valid ig-platform-id in Clover, e.g. `0x191b0000`
+
+## Fix for dysfunctional earplug after waking up from sleep
+> You need to have ALCPlugFix installed first -> See POST-INSTALL/ALCPlugFix
+1. install sleepwatcher: `brew install sleepwatcher`.
+2. start sleepwatcher service: `brew services start sleepwatcher`.
+3. create a file named `.wakeup` under you user home directroy: `touch ~/.wakeup`
+4. make the file executable: `chmod +x ~/.wakeup`
+5. add the following lines to the file
+```
+#!/bin/bash
+pid=`ps -ef | grep "ALCPlugFix"|wc -l`
+if [ -gt $pid ] 
+then 
+    pkill ALCPlugFix
+else
+    nohup </dev/null /usr/bin/ALCPlugFix &
+    sleep 1 s
+    pkill ALCPlugFix
+fi
+```
 
 ## Issues
 * The filesystem (APFS) could potentially be corrupted during reboots. I've had this happen to me more than a couple of times. Not sure if it's NVMe related.
