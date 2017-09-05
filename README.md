@@ -21,7 +21,7 @@ P.S. For some reason, quite inexplicably, `slider=168` doesn't work for me anymo
 
 
 
-## The current status:
+## The Current Status:
 ### Working:
 * Built-in speakers, ALCPlugFix needed for a functional headphone jack.
 * Samsung SM951 works out of the box, no NVME kext needed.
