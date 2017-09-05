@@ -16,7 +16,9 @@ P.S. For some reason, quite inexplicably, `slider=168` doesn't work for me anymo
 * POST-INSTALL: files needed for post-installation set-ups.
 
 ## Installation pitfalls
-* You may have to delete all kexts that start with `Brcm` 
+* You may have to delete all kexts that start with `Brcm` in CLOVER/kexts if you're stuck in an infinite loop when you're botting into the installer
+* You may have to delete EmuVariable64.efi in CLOVER/drivers if you're faced with an error (I can't recall the exact wording of it but it has something to do with being unable to find a file) right after you boot into the installer.
+
 
 
 ## The current status:
@@ -79,7 +81,6 @@ fi
 ```
 
 ## Issues <a name="issues"></a>
-1. The filesystem (APFS) could potentially be corrupted during reboots. I've had this happen to me more than a couple of times. Not sure if it's NVMe related.
-2. Time Machine works with APFS with no problem.
-3. The perl script seems to break copy && paste. The problem went away by itself after a few reboots.
-4. iTunes crashes frequently. The crashes do not happen at all with a fake ig-platform-id.
+1. Time Machine works with APFS with no problem.
+2. The perl script seems to break copy && paste. The problem went away by itself after a few reboots.
+3. iTunes crashes frequently. The crashes do not happen at all with a fake ig-platform-id.
