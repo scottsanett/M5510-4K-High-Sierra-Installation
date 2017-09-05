@@ -15,7 +15,8 @@ P.S. For some reason, quite inexplicably, `slider=168` doesn't work for me anymo
 * RECOVERY: clover configuration files for installation, reboots during updates, and recovery
 * POST-INSTALL: files needed for post-installation set-ups.
 
-## Installation pitfalls
+
+## Installation Pitfalls
 * You may have to delete all kexts that start with `Brcm` in CLOVER/kexts if you're stuck in an infinite loop when you attempt to boot into the installer
 * You may have to delete `EmuVariableUefi-64.efi` in CLOVER/drivers64UEFI if you're faced with an error (I can't recall the exact wording of it but it has something to do with being unable to find a file) right after you boot into the installer.
 
