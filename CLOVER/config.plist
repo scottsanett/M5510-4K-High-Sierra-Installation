@@ -616,7 +616,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v dart=0 nv_disable=1 kext-dev-mode=1 slide=146</string>
+		<string>-v dart=0 nv_disable=1 kext-dev-mode=1 slide=144</string>
 		<key>DefaultVolume</key>
 		<string>High Sierra</string>
 		<key>Legacy</key>
@@ -1070,7 +1070,7 @@
 		<string>C02420304DCFJYL14</string>
 		<key>ROM</key>
 		<data>
-		XS5DWGH7
+		KAtcUrNi
 		</data>
 	</dict>
 	<key>SMBIOS</key>
@@ -1080,35 +1080,45 @@
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP111.88Z.0142.B00.1708080655</string>
+		<string>MBP133.88Z.0233.B00.1708080034</string>
 		<key>Board-ID</key>
-		<string>Mac-189A3D4F975D5FFC</string>
+		<string>Mac-A5C67F76ED83108C</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02304405J9FF4MAD</string>
+		<string>C02420304DCFJYL14</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
-		<string>MacBookPro11,1</string>
+		<string>MacBookPro13,3</string>
 		<key>ChassisAssetTag</key>
 		<string>MacBook-Aluminum</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
-		<string>0x0A</string>
+		<string>0x09</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
+		<key>FirmwareFeatures</key>
+		<string>0xFC0FE13E</string>
+		<key>FirmwareFeaturesMask</key>
+		<string>0xFF1FFF3F</string>
 		<key>LocationInChassis</key>
 		<string>Part Component</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
 		<key>Mobile</key>
 		<true/>
+		<key>PlatformFeature</key>
+		<string>0x1A</string>
 		<key>ProductName</key>
-		<string>MacBookPro11,1</string>
+		<string>MacBookPro13,3</string>
 		<key>SerialNumber</key>
-		<string>C02K51B7FH00</string>
+		<string>C02MQ60QFGYY</string>
+		<key>SmUUID</key>
+		<string>6CFE5564-2280-58EC-B0A9-A8F9BE5EE6EF</string>
+		<key>Trust</key>
+		<true/>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
