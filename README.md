@@ -12,7 +12,6 @@ P.S. For some reason, quite inexplicably, `slider=168` doesn't work for me anymo
 
 ## Directory Info
 * CLOVER: clover configuration files for daily usage (and patched CoreDisplay)
-* RECOVERY: clover configuration files for installation, reboots during updates, and recovery
 * POST-INSTALL: files needed for post-installation set-ups.
 
 
