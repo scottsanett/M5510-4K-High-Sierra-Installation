@@ -8,6 +8,16 @@ The BIOS version for my laptop is 1.3.0 (the latest as of Aug 28 2017 on Dell's 
 
 You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS15-9550-High-Sierra/blob/master/README.md) for calculating slider values. I use `slider=168` for High Sierra and `slider=146` for Sierra; the latter of which had to be manually calculated as 168 didn't work.
 
+P.S. For some reason, quite inexplicably, `slider=168` doesn't work for me anymore; the new calculated value is 144.
+
+## Directory Info
+* CLOVER: clover configuration files for daily usage (and patched CoreDisplay)
+* RECOVERY: clover configuration files for installation, reboots during updates, and recovery
+* POST-INSTALL: files needed for post-installation set-ups.
+
+## Installation pitfalls
+* You may have to delete all kexts that start with `Brcm` 
+
 
 ## The current status:
 ### Working:
