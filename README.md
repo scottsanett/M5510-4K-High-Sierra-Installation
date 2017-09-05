@@ -83,4 +83,4 @@ fi
 ## Issues <a name="issues"></a>
 1. Time Machine works with APFS with no problem.
 2. The perl script seems to break copy && paste. The problem went away by itself after a few reboots.
-3. iTunes crashes frequently. The crashes do not happen at all with a fake ig-platform-id.
+3. iTunes crashes frequently. The crashes do not happen at all with a fake ig-platform-id. I'm temporarily using Swinsian as an replacement (for music management, not iOS device manager).
