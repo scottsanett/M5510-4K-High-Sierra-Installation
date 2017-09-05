@@ -24,7 +24,7 @@ P.S. For some reason, quite inexplicably, `slider=168` doesn't work for me anymo
 ## The current status:
 ### Working:
 * Built-in speakers, ALCPlugFix needed for a functional headphone jack.
-* Samsung SM951 works out of the box, no NVME kext needed. (See [Issues #1](#issues))
+* Samsung SM951 works out of the box, no NVME kext needed.
 * Intel HD530 with 4K display
 * Thunderbolt hotplug (not very stable)
 * Brightness slider && tuning
