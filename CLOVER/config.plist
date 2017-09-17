@@ -20,6 +20,8 @@
 				<true/>
 				<key>FixIPIC_0040</key>
 				<true/>
+				<key>FixShutdown_0004</key>
+				<true/>
 			</dict>
 			<key>Patches</key>
 			<array>
@@ -618,7 +620,7 @@
 		<key>Arguments</key>
 		<string>-v dart=0 nv_disable=1 kext-dev-mode=1 slide=144</string>
 		<key>DefaultVolume</key>
-		<string>High Sierra</string>
+		<string>Macintosh HD</string>
 		<key>Legacy</key>
 		<string>LegacyBiosDefault</string>
 		<key>Log</key>
@@ -1070,7 +1072,7 @@
 		<string>C02420304DCFJYL14</string>
 		<key>ROM</key>
 		<data>
-		75r1WGH7
+		++YcWGH7
 		</data>
 	</dict>
 	<key>SMBIOS</key>
@@ -1086,7 +1088,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02654501OPDNJLA8</string>
+		<string>C02730100J9F9H0CB</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -1114,7 +1116,7 @@
 		<key>ProductName</key>
 		<string>MacBookPro13,3</string>
 		<key>SerialNumber</key>
-		<string>C02SY28LGTFN</string>
+		<string>C02V44LOGTFN</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
@@ -1123,7 +1125,7 @@
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>C3116D31-4A2A-4C58-91D7-EEA17F4F5F38</string>
+		<string>3076338B-D24C-461E-A453-1524DCAC11E4</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
