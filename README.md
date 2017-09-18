@@ -10,7 +10,7 @@ You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS
 
 
 ## Directory Info
-* CLOVER: clover configuration files for daily usage (and patched CoreDisplay)
+* CLOVER: clover configuration files for daily usage
 * POST-INSTALL: files needed for post-installation set-ups.
 
 
