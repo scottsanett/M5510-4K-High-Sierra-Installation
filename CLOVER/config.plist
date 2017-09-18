@@ -618,7 +618,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v dart=0 nv_disable=1 kext-dev-mode=1 slide=144</string>
+		<string>-v dart=0 nv_disable=1 kext-dev-mode=1 slide=128</string>
 		<key>DefaultVolume</key>
 		<string>Macintosh HD</string>
 		<key>Legacy</key>
@@ -803,6 +803,8 @@
 			<key>Tool</key>
 			<true/>
 		</dict>
+		<key>ScreenResolution</key>
+		<string>1920x1080</string>
 		<key>Theme</key>
 		<string>BGM</string>
 	</dict>
@@ -930,7 +932,7 @@
 				<key>Comment</key>
 				<string>eDP, port 0000, 0x191e0000, 0x19160000, 0x19260000, 0x19270000, 0x191b0000, 0x19160002, 0x19260002, 0x191e0003, 0x19260004, 0x19270004, 0x193b0005 credit syscl</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				AAAIAAIAAACYAAAAAQUJAAAEAAA=
@@ -1090,7 +1092,7 @@
 		<string>C02420304DCFJYL14</string>
 		<key>ROM</key>
 		<data>
-		/9LgXubv
+		dKQcXubv
 		</data>
 	</dict>
 	<key>SMBIOS</key>
@@ -1106,7 +1108,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02653200OPF2FR1F</string>
+		<string>C027261044NF651CB</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -1134,9 +1136,7 @@
 		<key>ProductName</key>
 		<string>MacBookPro13,3</string>
 		<key>SerialNumber</key>
-		<string>C02SX1XOGTFN</string>
-		<key>SmUUID</key>
-		<string>6CFE5564-2280-58EC-B0A9-A8F9BE5EE6EF</string>
+		<string>C02TX26DGTFN</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
@@ -1145,7 +1145,7 @@
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>21DA639D-A066-45DA-AE69-3B3CF3322328</string>
+		<string>010EFD9C-8A93-46C8-9108-771BBCEA6D1E</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
