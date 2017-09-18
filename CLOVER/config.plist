@@ -1092,7 +1092,7 @@
 		<string>C02420304DCFJYL14</string>
 		<key>ROM</key>
 		<data>
-		dKQcXubv
+		h/L7Xubv
 		</data>
 	</dict>
 	<key>SMBIOS</key>
@@ -1102,17 +1102,17 @@
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP133.88Z.0233.B00.1708080034</string>
+		<string>MBP143.88Z.0167.B00.1708080129</string>
 		<key>Board-ID</key>
-		<string>Mac-A5C67F76ED83108C</string>
+		<string>Mac-551B86E5744E2388</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C027261044NF651CB</string>
+		<string>C027323004NFF4NJA</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
-		<string>MacBookPro13,3</string>
+		<string>MacBookPro14,3</string>
 		<key>ChassisAssetTag</key>
 		<string>MacBook-Aluminum</string>
 		<key>ChassisManufacturer</key>
@@ -1134,18 +1134,16 @@
 		<key>PlatformFeature</key>
 		<string>0x1A</string>
 		<key>ProductName</key>
-		<string>MacBookPro13,3</string>
+		<string>MacBookPro14,3</string>
 		<key>SerialNumber</key>
-		<string>C02TX26DGTFN</string>
-		<key>Trust</key>
-		<true/>
+		<string>C02V61K7HTD5</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>010EFD9C-8A93-46C8-9108-771BBCEA6D1E</string>
+		<string>C06399EB-2369-42AC-BF61-B296F0755CAC</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
