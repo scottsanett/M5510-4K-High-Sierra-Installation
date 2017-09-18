@@ -83,7 +83,6 @@ fi
 ```
 
 ## Issues <a name="issues"></a>
-1. Time Machine works with APFS with no problem.
 2. iTunes crashes frequently. 
     * The crashes do not happen at all with a fake ig-platform-id. 
     * I'm temporarily using Swinsian as an replacement (for music management, not iOS device manager).
