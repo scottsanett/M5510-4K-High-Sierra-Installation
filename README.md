@@ -26,7 +26,7 @@ P.S. For some reason, quite inexplicably (or SMBIOS related, I was using MBP11,1
 * Built-in speakers, ALCPlugFix needed for a functional headphone jack.
 * Samsung SM951 works out of the box, no NVME kext needed.
 * Intel HD530 with 4K display
-* Thunderbolt hotplug (not very stable)
+* Typc C hotplug (not very stable)
 * Brightness slider && tuning
 * HWP, with CPU frequency as low as 900MHz.
 
