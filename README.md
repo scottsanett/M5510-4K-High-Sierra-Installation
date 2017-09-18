@@ -83,9 +83,9 @@ fi
 ```
 
 ## Issues <a name="issues"></a>
-2. iTunes crashes frequently. 
+1. iTunes crashes frequently. 
     * The crashes do not happen at all with a fake ig-platform-id. 
     * I'm temporarily using Swinsian as an replacement (for music management, not iOS device manager).
-3. Random `fs_get_inode_with_hint` errors on reboot.
+2. Random `fs_get_inode_with_hint` errors on reboot.
     * I've had this happened to me several times. I have no idea when and why this happens, but when it does, the fix is to replace apfs.efi in CLOVER with the one in the system. You may find your own `apfs.efi` in `/usr/standalone/i386`. 
     * It's best if you could have a bootable (and of course working) macOS installation on an external disk in case things like these happen. I personally created such one with Carbon Copy Cloner.
