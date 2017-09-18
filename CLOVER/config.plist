@@ -618,19 +618,17 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v dart=0 nv_disable=1 kext-dev-mode=1 slide=128</string>
+		<string>-v dart=0 darkwake=no nv_disable=1 kext-dev-mode=1 slide=128</string>
 		<key>DefaultVolume</key>
 		<string>Macintosh HD</string>
 		<key>Legacy</key>
 		<string>LegacyBiosDefault</string>
 		<key>Log</key>
 		<false/>
-		<key>NeverHibernate</key>
-		<true/>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>5</integer>
+		<integer>2</integer>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
@@ -1092,7 +1090,7 @@
 		<string>C02420304DCFJYL14</string>
 		<key>ROM</key>
 		<data>
-		h/L7Xubv
+		FotPXubv
 		</data>
 	</dict>
 	<key>SMBIOS</key>
@@ -1102,17 +1100,17 @@
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP143.88Z.0167.B00.1708080129</string>
+		<string>MBP133.88Z.0233.B00.1708080034</string>
 		<key>Board-ID</key>
-		<string>Mac-551B86E5744E2388</string>
+		<string>Mac-A5C67F76ED83108C</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C027323004NFF4NJA</string>
+		<string>C02735200GUDNY3JA</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
-		<string>MacBookPro14,3</string>
+		<string>MacBookPro13,3</string>
 		<key>ChassisAssetTag</key>
 		<string>MacBook-Aluminum</string>
 		<key>ChassisManufacturer</key>
@@ -1134,16 +1132,18 @@
 		<key>PlatformFeature</key>
 		<string>0x1A</string>
 		<key>ProductName</key>
-		<string>MacBookPro14,3</string>
+		<string>MacBookPro13,3</string>
 		<key>SerialNumber</key>
-		<string>C02V61K7HTD5</string>
+		<string>C02V929JGTFN</string>
+		<key>Trust</key>
+		<true/>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>C06399EB-2369-42AC-BF61-B296F0755CAC</string>
+		<string>AC841052-B432-4C9D-B666-752E5A426B48</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
