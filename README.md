@@ -24,9 +24,9 @@ P.S. For some reason, quite inexplicably (or SMBIOS related, I was using MBP11,1
 ## The Current Status:
 ### Working:
 * Built-in speakers, ALCPlugFix needed for a functional headphone jack.
-* Samsung SM951 works out of the box, no NVME kext needed.
+* Samsung SM951 works out of the box, no NVME kext needed. (Now I'm using Toshiba XG3 with 4K sector)
 * Intel HD530 with 4K display
-* Typc C hotplug (not very stable)
+* Typc-C plug (not very stable)
 * Brightness slider && tuning
 * HWP, with CPU frequency as low as 900MHz.
 
