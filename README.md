@@ -47,6 +47,8 @@ Things that are not listed here have not been tested.
 
 
 ## Fix for 4K:
+__This has already been achieved by using `CoreDisplayFixup.kext` and `Lilu.kext` (both included in the repo). Plus, the kexts don't break copy && paste, while the patch below does.__ 
+
 1. boot the installer with an invalid ig-platform-id in Clover, e.g. `0x12345678`
 2. after the system is installed, disable SIP if necessary
 3. apply the pixel clock patch below
