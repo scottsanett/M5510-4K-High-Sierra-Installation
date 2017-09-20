@@ -38,6 +38,7 @@ sudo touch /System/Library/Extensions && sudo kextcache -u /
 ```
 
 ### Not Working:
+* bluetooth
 * __[Fixed]__ FakeSMC sensors, but instead Activity Monitor doesn't crash anymore at Energy tab
 * __[Fixed]__ Battery status (charge, percentage) doesn't update on itself. You have to play with it (toggle Show Percentage) to update the value.
 * *see also* [Issues](#issues)
