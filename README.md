@@ -83,16 +83,13 @@ fi
 ```
 
 ## Concerning `X86PlatformPluginInjector` and darkwake
+__\[Needs more experimentation\]__
 For some reasons the OS has been having problems with sleeping. (It's not necessarily a problem with High Sierra. It might have been there since Sierra.) It sporadically wakes itself up (without lighting up the monitor), sometimes it doesn't sleep at all. My guess is that it has something to do with darkwake, and since I don't need it anyway, I might as well disable it altogether. 
 
 The new `X86PlatformPluginInjector.kext` contains a `Mac-A5C67F76ED83108C.plist` under `contents/resources/` that has been taken directly from `/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext` with the following modifications:
 * Under `FrequenciesVectors`, I changed the second hex from `0d000000` to `09000000` to enable a lowest frequency rate at 900MHz. The value differs for different CPU models and needs to be changed accordingly.
 * `Nofication Wake` has been changed from `YES` to `NO`;
 * `DarkwakeServices` has been removed.
-
-After installing the kext to /Library/Extensions and a reboot, power nap related options in Energy Saver are gone, and the OS hasn't had any voluntary wakes since then.
-![Battery](https://user-images.githubusercontent.com/19986409/30575851-356ec73c-9d36-11e7-837b-0a39e991afdd.jpg)
-![Power Adapter](https://user-images.githubusercontent.com/19986409/30575852-3571734c-9d36-11e7-99f6-bc626e81851c.jpg)
 
 
 ## Issues <a name="issues"></a>
