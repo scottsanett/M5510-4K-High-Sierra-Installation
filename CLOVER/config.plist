@@ -618,7 +618,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v dart=0 darkwake=0 nv_disable=1 kext-dev-mode=1 slide=128</string>
+		<string>-v dart=0 darkwake=no nv_disable=1 kext-dev-mode=1 slide=128</string>
 		<key>DefaultVolume</key>
 		<string>Macintosh HD</string>
 		<key>Legacy</key>
@@ -1093,12 +1093,6 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
-		<key>MLB</key>
-		<string>C02420304DCFJYL14</string>
-		<key>ROM</key>
-		<data>
-		aIubXubv
-		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -1112,8 +1106,6 @@
 		<string>Mac-A5C67F76ED83108C</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string>C02752270J9F64WFB</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -1140,8 +1132,6 @@
 		<string>0x1A</string>
 		<key>ProductName</key>
 		<string>MacBookPro13,3</string>
-		<key>SerialNumber</key>
-		<string>C02VW107GTFN</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
@@ -1149,8 +1139,6 @@
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
-		<key>CustomUUID</key>
-		<string>28E050FE-BB22-4773-BA9D-D57F2B8473D2</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
