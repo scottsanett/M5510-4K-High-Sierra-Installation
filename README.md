@@ -26,7 +26,6 @@ You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS
 * Samsung SM951 works out of the box, no NVME kext needed. (Now I'm using Toshiba XG3 with 4K sector)
 * Intel HD530 with 4K display
 * Typc-C plug (not very stable)
-* Brightness slider && tuning
 * HWP, with CPU frequency as low as 900MHz.
 
 > For the last two, install the two kexts in POST-INSTALL/LE to /Library/Extensions/ and rebuild kernel cache with the bash script below.
@@ -39,6 +38,7 @@ sudo touch /System/Library/Extensions && sudo kextcache -u /
 
 ### Not Working:
 * bluetooth
+* Brightness slider && tuning (worked with GM, broken after release on Sept 25)
 * __[Fixed]__ FakeSMC sensors, but instead Activity Monitor doesn't crash anymore at Energy tab
 * __[Fixed]__ Battery status (charge, percentage) doesn't update on itself. You have to play with it (toggle Show Percentage) to update the value.
 * *see also* [Issues](#issues)
