@@ -618,13 +618,15 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v dart=0 darkwake=10 nv_disable=1 kext-dev-mode=1 slide=128</string>
+		<string>dart=0 darkwake=10 nv_disable=1 kext-dev-mode=1 slide=128</string>
 		<key>DefaultVolume</key>
 		<string>Macintosh HD</string>
 		<key>Legacy</key>
 		<string>LegacyBiosDefault</string>
 		<key>Log</key>
 		<false/>
+		<key>NeverHibernate</key>
+		<true/>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
