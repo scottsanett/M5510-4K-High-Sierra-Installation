@@ -38,7 +38,7 @@ sudo touch /System/Library/Extensions && sudo kextcache -u /
 ```
 
 ### Not Working:
-* bluetooth
+* Bluetooth
 * __[Fixed]__ FakeSMC sensors, but instead Activity Monitor doesn't crash anymore at Energy tab
 * __[Fixed]__ Battery status (charge, percentage) doesn't update on itself. You have to play with it (toggle Show Percentage) to update the value.
 * *see also* [Issues](#issues)
@@ -90,6 +90,51 @@ The new `X86PlatformPluginInjector.kext` contains a `Mac-A5C67F76ED83108C.plist`
 * Under `FrequenciesVectors`, I changed the second hex from `0d000000` to `09000000` to enable a lowest frequency rate at 900MHz. The value differs for different CPU models and needs to be changed accordingly.
 * `Nofication Wake` has been changed from `YES` to `NO`;
 * `DarkwakeServices` has been removed.
+* `pmset` settings:
+	* `hibernatemode` set to 0
+	* `ttyskeepawake` set to 0
+	* `tcpkeepalive` set to 0
+
+
+## Concerning `ApplePS2SmartTouchpad.kext`
+The author of the kext seems to have postponed the development of this driver until the end of this year. This configuration uses Version 3.6 beta 5, which is the latest as of October 18 2018.
+
+The kext has been modified and tuned for a better usability, as some of the gestures are frequently misinterpreted.
+
+The kext now supports these gestures:
+### Click
+* bottom click: middle click
+* 1 finger click: left lick
+* 2 finger click: right click
+* 3 finger click: preview (files, webpages, look up words in dictionary)
+* 4 finger click: hide current window
+* 5 finger click: close current window (or current tab in multi-tab applications, might crash Safari as well)
+
+### Pinch
+* 5 finger pinch: quit application
+
+### Press
+* 4 finger press: show application windows
+* 5 finger press: show launchpad (keyboard shortcut for Show Launchpad needs to be mapped to F12)
+(3 finger press weirdly doesn't work in this version on my laptop)
+
+### Swipe
+* 3 finger swipe left: web browser goes forward
+* 3 finger swipe right: web browser goes backward
+* 4 finger swipe left: go to next desktop
+* 4 finger swipe right: go to previous desktop
+* 4 finger swipe up: maximum window
+* 4 finger swipe down: minimize window
+
+### Edge Swipe
+* right edge swipe left: notification center (keyboard shortcut for `Show Notification Center` needs to be mapped to CTRL CMD N)
+* left edge swipe right: application switcher
+* top edge swipe down: mission control
+* bottom edge swipe up: show desktop
+
+### Rotation
+Due to the limitation of the kext itself, the gesture doesn't look like a rotation. For it to work, one needs to set a finger (I'd suggest using index as it's easier) on the touchpad, and flick the middle or the ring finger, up for left rotation, down for right rotation.
+Rotations are mapped to `CMD + L` and `CMD + R`, hence right rotation refreshes webpages in browsers.
 
 
 ## Issues <a name="issues"></a>
@@ -99,3 +144,5 @@ The new `X86PlatformPluginInjector.kext` contains a `Mac-A5C67F76ED83108C.plist`
 2. Random `fs_get_inode_with_hint` errors on reboot.
     * I've had this happened to me several times. I have no idea when and why this happens, but when it does, the fix is to replace apfs.efi in CLOVER with the one in the system. You may find your own `apfs.efi` in `/usr/standalone/i386`. 
     * It's best if you could have a bootable (and of course working) macOS installation on an external disk in case things like these happen. I personally created such one with Carbon Copy Cloner.
+
+
