@@ -82,7 +82,6 @@ else
 fi
 ```
 
-<<<<<<< HEAD
 ## Concerning `X86PlatformPluginInjector` and darkwake
 __\[Needs more experimentation\]__
 For some reasons the OS has been having problems with sleeping. (It's not necessarily a problem with High Sierra. It might have been there since Sierra.) It sporadically wakes itself up (without lighting up the monitor), sometimes it doesn't sleep at all. My guess is that it has something to do with darkwake, and since I don't need it anyway, I might as well disable it altogether. 
@@ -137,8 +136,6 @@ The kext now supports these gestures:
 Due to the limitation of the kext itself, the gesture doesn't look like a rotation. For it to work, one needs to set a finger (I'd suggest using index as it's easier) on the touchpad, and flick the middle or the ring finger, up for left rotation, down for right rotation.
 Rotations are mapped to `CMD + L` and `CMD + R`, hence right rotation refreshes webpages in browsers.
 
-=======
->>>>>>> origin/master
 
 ## Issues <a name="issues"></a>
 1. iTunes crashes frequently. 
