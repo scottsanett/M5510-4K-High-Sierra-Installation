@@ -83,7 +83,6 @@ fi
 ```
 
 ## Concerning `X86PlatformPluginInjector` and darkwake
-__\[Needs more experimentation\]__
 For some reasons the OS has been having problems with sleeping. (It's not necessarily a problem with High Sierra. It might have been there since Sierra.) It sporadically wakes itself up (without lighting up the monitor), sometimes it doesn't sleep at all. My guess is that it has something to do with darkwake, and since I don't need it anyway, I might as well disable it altogether. 
 
 The new `X86PlatformPluginInjector.kext` contains a `Mac-A5C67F76ED83108C.plist` under `contents/resources/` that has been taken directly from `/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext` with the following modifications:
