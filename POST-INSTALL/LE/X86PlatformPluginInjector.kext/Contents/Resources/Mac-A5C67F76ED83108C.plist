@@ -11,7 +11,7 @@
 		<key>UnifiedSleepSliderPref</key>
 		<true/>
 		<key>PublishBatteryFactors</key>
-		<true/>
+		<false/>
 		<key>NetworkTimerDelay</key>
 		<integer>900</integer>
 		<key>StandbyDelay</key>
