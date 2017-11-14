@@ -26,7 +26,8 @@ You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS
 * Samsung SM951 works out of the box, no NVMe kext needed. (Now I'm using Toshiba XG3 with 4K sector)
 * Intel HD530 with 4K display
 * Typc-C plug (not very stable)
-* Battery status (charge status, percentage) 
+* Bluetooth (see Issues #3)
+* Battery status (charge status, percentage)
 * FakeSMC sensors, also Activity Monitor doesn't crash anymore at Energy tab
 * Brightness slider && tuning
 * HWP, with CPU frequency as low as 900MHz.
@@ -40,7 +41,6 @@ sudo touch /System/Library/Extensions && sudo kextcache -u /
 ```
 
 ### Not Working:
-* Bluetooth
 * *see also* [Issues](#issues)
 
 Things that are not listed here have not been tested.
@@ -142,6 +142,8 @@ Rotations are mapped to `CMD + L` and `CMD + R`, hence right rotation refreshes 
     * I'm temporarily using Swinsian as an replacement (for music management, not iOS device manager).
 2. Random `fs_get_inode_with_hint` errors on reboot.
     * I've had this happened to me several times. I have no idea when and why this happens, but when it does, the fix is to replace apfs.efi in CLOVER with the one in the system. You may find your own `apfs.efi` in `/usr/standalone/i386`. 
-    * It's best if you could have a bootable (and of course working) macOS installation on an external disk in case things like these happen. I personally created such one with Carbon Copy Cloner.
+    * It's best if you could have a bootable (and of course working) macOS installation on an external disk in case things like these happen. I personally created such one with Carbon Copy Cloner.
+3. Bluetooth is semi-functional.
+    * It is possible to transfer files between devices (I specified file transfer as I've tested only that), but once one tries to turn it off, it not only stays on, but file transter stops working as well, which only a reboot can fix.
 
 
