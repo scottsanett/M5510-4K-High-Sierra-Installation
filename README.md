@@ -137,7 +137,7 @@ Rotations are mapped to `CMD + L` and `CMD + R`, hence right rotation refreshes 
 
 
 ## Issues <a name="issues"></a>
-1. __[Seemingly Fixed]__ iTunes crashes frequently. 
+1. __[Fixed]__ iTunes crashes frequently. 
     * The crashes do not happen at all with a fake ig-platform-id. 
     * I'm temporarily using Swinsian as an replacement (for music management, not iOS device manager).
 2. __[Rare]__ Random `fs_get_inode_with_hint` errors on reboot.
