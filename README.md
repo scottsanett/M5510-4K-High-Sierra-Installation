@@ -27,7 +27,7 @@ You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS
 * Intel HD530 with 4K display
 * Typc-C plug (not very stable)
 * Bluetooth (see Issues #3)
-* Battery status (charge status, percentage)
+* Battery status (charge status, percentage, see Issues #4)
 * FakeSMC sensors, also Activity Monitor doesn't crash anymore at Energy tab
 * Brightness slider && tuning
 * HWP, with CPU frequency as low as 900MHz.
@@ -145,5 +145,6 @@ Rotations are mapped to `CMD + L` and `CMD + R`, hence right rotation refreshes 
     * It's best if you could have a bootable (and of course working) macOS installation on an external disk in case things like these happen. I personally created such one with Carbon Copy Cloner.
 3. Bluetooth is semi-functional.
     * It is possible to transfer files between devices (I specified file transfer as I've tested only that), but once one tries to turn it off, it not only stays on, but file transter stops working as well, which only a reboot can fix.
-
-
+4. The battery menubar icon does not appear on startup/reboot; adding `abm_firstpolldelay=16000` to boot arguments does not seem to fix the issue (it does so occasionally).
+    * Changing `PublicBatteryFactor` from `YES` to `NO` in `X86PlatformPluginInjector.kext` fixed the issue of battery percentage not showing correctly (it doesn't sync with the data in HWMonitor), with the price that the built-in battery icon in menubar does NOT upgrade itself. I'm using iStat Menus as a workaround, which does upgrade the values (and displays the remaining time if you like) correctly.
+    * Half-dimming the monitor when unplugged does not work properly on startup/reboot: the screen barely dims. A workaround is using execute a `pmset` command that doesn't really need to change any existing setting. The command I use is `sudo pmset -a ttyskeepawake 0`. I set it to execute on startups with a delay of 30 seconds with a modified `launchd-oneshot`, a shell script that can be installed using homebrew/found on github. `launchd-oneshot` does automatic cleanup after the task is completed, which is not what I need, so I removed the code concerning cleanup in the shell script. 
