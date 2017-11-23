@@ -136,6 +136,9 @@ Due to the limitation of the kext itself, the gesture doesn't look like a rotati
 Rotations are mapped to `CMD + L` and `CMD + R`, hence right rotation refreshes webpages in browsers.
 
 
+### An Alternative Solution to Touchpad
+I have known about the touchscreen drivers for macOS by touch-base for quite a while and yesterday I decided to give it a try. The driver enables multi-touch support for the touchscreen, which macOS supports only single touch natively, and it allows personalizations for many gestures that call macOS APIs (pinch zooms, smart zooms, smooth scrolling, rotation, switching between fullscreen apps/show launchpad/show desktop animation that follows the fingers rather than a workaround solution that invokes the corresponding keyboard shortcut, etc), which no touchpad kext that I know of is capable of doing. It is by no means cheap ($105 for a home license), but it works well. This could be a solution for those unsatisfied with all the touchpad kexts available as it provides a native macOS trackpad feel.  
+
 ## Issues <a name="issues"></a>
 1. __[Fixed]__ iTunes crashes frequently. 
     * The crashes do not happen at all with a fake ig-platform-id. 
