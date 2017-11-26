@@ -12,15 +12,15 @@
 			<false/>
 			<key>Fixes</key>
 			<dict>
-				<key>FIX_RTC_20000</key>
+				<key>FixHeaders</key>
 				<true/>
-				<key>FIX_TMR_40000</key>
+				<key>FixIPIC</key>
 				<true/>
-				<key>FixHeaders_20000000</key>
+				<key>FixRTC</key>
 				<true/>
-				<key>FixIPIC_0040</key>
+				<key>FixShutdown</key>
 				<true/>
-				<key>FixShutdown_0004</key>
+				<key>FixTMR</key>
 				<true/>
 			</dict>
 			<key>Patches</key>
@@ -470,15 +470,13 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 kext-dev-mode=1 slide=128 darkwake=no abm_firstpolldelay=16000</string>
+		<string>dart=0 darkwake=0 nv_disable=1 kext-dev-mode=1 slide=128</string>
 		<key>DefaultVolume</key>
 		<string>Macintosh HD</string>
 		<key>Legacy</key>
 		<string>LegacyBiosDefault</string>
 		<key>Log</key>
 		<false/>
-		<key>NeverHibernate</key>
-		<true/>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
@@ -626,22 +624,6 @@
 					<key>Type</key>
 					<string>Other</string>
 				</dict>
-				<dict>
-					<key>Disabled</key>
-					<false/>
-					<key>Ignore</key>
-					<false/>
-					<key>Path</key>
-					<string>\EFI\ubuntu\grubx64.efi</string>
-					<key>Title</key>
-					<string>Linux Mint</string>
-					<key>Type</key>
-					<string>Linux</string>
-					<key>Volume</key>
-					<string>8885B230-FC80-40C8-B4E1-C34E5AB45D9A</string>
-					<key>VolumeType</key>
-					<string>Internal</string>
-				</dict>
 			</array>
 		</dict>
 		<key>Language</key>
@@ -723,7 +705,7 @@
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>AEFQUExFIFNTRAA=</data>
 				<key>Name</key>

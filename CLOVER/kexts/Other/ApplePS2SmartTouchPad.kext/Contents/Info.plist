@@ -848,7 +848,7 @@
 						<key>MouseMode</key>
 						<integer>800</integer>
 						<key>Synaptics</key>
-						<integer>1400</integer>
+						<integer>1600</integer>
 					</dict>
 					<key>PointerSmoothLevel</key>
 					<integer>7</integer>
@@ -1117,7 +1117,7 @@
 						<key>Synaptics</key>
 						<integer>50</integer>
 						<key>SynapticsClickPad</key>
-						<integer>40</integer>
+						<integer>50</integer>
 					</dict>
 					<key>1FingerTapAction</key>
 					<integer>35</integer>
