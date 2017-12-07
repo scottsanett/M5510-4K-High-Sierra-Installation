@@ -1,0 +1,12 @@
+#!/bin/bash
+
+pid=`ps -ef | grep "ALCPlugFix"|wc -l`
+
+if [ -gt $pid ] 
+then 
+    pkill ALCPlugFix
+else
+    nohup </dev/null /usr/bin/ALCPlugFix &
+    sleep 1 s
+    pkill ALCPlugFix
+fi
