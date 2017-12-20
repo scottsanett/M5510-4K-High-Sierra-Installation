@@ -25,8 +25,8 @@ You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS
 * Built-in speakers, ALCPlugFix needed for a functional headphone jack.
 * Samsung SM951 works out of the box, no NVMe kext needed. (Now I'm using Toshiba XG3 with 4K sector)
 * Intel HD530 with 4K display
-* Typc-C plug (not very stable)
-* Bluetooth (see Issues #3)
+* Typc-C plug
+* Bluetooth
 * Battery status (charge status, percentage, see Issues #4)
 * FakeSMC sensors, also Activity Monitor doesn't crash anymore at Energy tab
 * Brightness slider && tuning
@@ -147,7 +147,7 @@ I have known about the touchscreen drivers for macOS by touch-base for quite a w
 2. __[Rare]__ Random `fs_get_inode_with_hint` errors on reboot.
     * I've had this happened to me several times. I have no idea when and why this happens, but when it does, the fix is to replace apfs.efi in CLOVER with the one in the system. You may find your own `apfs.efi` in `/usr/standalone/i386`. 
     * It's best if you could have a bootable (and of course working) macOS installation on an external disk in case things like these happen. I personally created such one with Carbon Copy Cloner.
-3. Bluetooth is semi-functional.
+3. __[Fixed]__ Bluetooth is semi-functional.
     * It is possible to transfer files between devices (I specified file transfer as I've tested only that), but once one tries to turn it off, it not only stays on, but file transter stops working as well, which only a reboot can fix.
 4. The battery menubar icon does not appear on startup/reboot; adding `abm_firstpolldelay=16000` to boot arguments does not seem to fix the issue (it does so occasionally).
     * Changing `PublicBatteryFactor` from `YES` to `NO` in `X86PlatformPluginInjector.kext` fixed the issue of battery percentage not showing correctly (it doesn't sync with the data in HWMonitor), with the price that the built-in battery icon in menubar does NOT upgrade itself. I'm using iStat Menus as a workaround, which does upgrade the values (and displays the remaining time if you like) correctly.
