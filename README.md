@@ -60,27 +60,6 @@ sudo codesign -f -s - /System/Library/Frameworks/CoreDisplay.framework/Versions/
 
 4. reboot with a valid ig-platform-id in Clover, e.g. `0x191b0000`
 
-## Fix for dysfunctional earplug after waking up from sleep
-__You need to have ALCPlugFix installed first__ -> See [POST-INSTALL/ALCPlugFix](https://github.com/scottsanett/M5510-4K-High-Sierra-Installation/tree/master/POST-INSTALL/ALCPlugFix)
-
-1. install sleepwatcher: `brew install sleepwatcher`
-2. start sleepwatcher service: `brew services start sleepwatcher`
-3. create a file named: `.wakeup` under you user home directroy: `touch ~/.wakeup`
-4. make the file executable: `chmod +x ~/.wakeup`
-5. add the following lines to the file
-
-```
-#!/bin/bash
-pid=`ps -ef | grep "ALCPlugFix"|wc -l`
-if [ -gt $pid ] 
-then 
-    pkill ALCPlugFix
-else
-    nohup </dev/null /usr/bin/ALCPlugFix &
-    sleep 1 s
-    pkill ALCPlugFix
-fi
-```
 
 ## Concerning `X86PlatformPluginInjector` and darkwake
 For some reasons the OS has been having problems with sleeping. (It's not necessarily a problem with High Sierra. It might have been there since Sierra.) It sporadically wakes itself up (without lighting up the monitor), sometimes it doesn't sleep at all. My guess is that it has something to do with darkwake, and since I don't need it anyway, I might as well disable it altogether. 
