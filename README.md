@@ -22,14 +22,14 @@ You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS
 
 ## The Current Status:
 ### Working:
-* Built-in speakers, ALCPlugFix needed for a functional headphone jack.
+* Built-in speakers and audio jack
 * Samsung SM951 works out of the box, no NVMe kext needed. (Now I'm using Toshiba XG3 with 4K sector)
 * Intel HD530 with 4K display
 * Typc-C plug
 * Bluetooth
 * Battery status (charge status, percentage, see Issues #4)
 * FakeSMC sensors, also Activity Monitor doesn't crash anymore at Energy tab
-* Brightness slider && tuning
+* Display brightness
 * HWP, with CPU frequency as low as 900MHz.
 
 > For the last two, install the two kexts in POST-INSTALL/LE to /Library/Extensions/ and rebuild kernel cache with the bash script below.
