@@ -1,4 +1,4 @@
-# M5510-4K-High-Sierra-Installation
+# Dell Precision 5510 4K High Sierra Installation
 
 This repository is based on [wmchris' high sierra repo](https://github.com/wmchris/DellXPS15-9550-OSX) for XPS15 9550.
 
