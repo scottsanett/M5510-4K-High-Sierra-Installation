@@ -991,7 +991,7 @@
 					<key>InertialScrollDepth</key>
 					<integer>3</integer>
 					<key>NoInertiaForHScroll</key>
-					<true/>
+					<false/>
 					<key>ScrollAccelDelay</key>
 					<integer>1</integer>
 					<key>ScrollDirectionSamples</key>
