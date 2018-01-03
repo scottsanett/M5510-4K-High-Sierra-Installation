@@ -75,6 +75,17 @@ The new `X86PlatformPluginInjector.kext` contains a `Mac-A5C67F76ED83108C.plist`
 
 
 ## Concerning `ApplePS2SmartTouchpad.kext`
+### Update
+I have replaced this kext with `VoodooPS2Controller` due to stability issues. This kext is more feature-rich and has better support for scrolling, but its debugged nature floods the Console and it seems buggy in the following aspects:
+
+1. the keyboard is stuck (having to wait a few seconds to be able to input anything) during caps switch after a few days of not rebooting the machine; this can be (temporarily) fixed by sleeping.
+2. if you attempt to clean the touchpad and mop all over it with the machine still awake, the touchpad stops working altogether; only a reboot is able to fix this.
+
+`VoodooPS2Controller` seems a little bit stabler and more responsive, but the scrolling and gesture support are far from satisfactory. Thus I'm using the touchscreen with a paid driver that supports native macOS gestures as a replacement.
+
+If you decided to use this over `VoodooPS2Controller`, replace `VoodooPS2Controller.kext` in the kext directory with `ApplePS2SmartTouchpad.kext`, which can be found in the POST-INSTALL.
+
+### Info
 The author of the kext seems to have postponed the development of this driver until the end of this year. This configuration uses Version 3.6 beta 5, which is the latest as of October 18 2018.
 
 The kext has been modified and tuned for a better usability, as some of the gestures are frequently misinterpreted.
@@ -131,3 +142,5 @@ I have known about the touchscreen drivers for macOS by touch-base for quite a w
 4. __[Rare]__ The battery menubar icon does not appear on startup/reboot
     * Changing `PublicBatteryFactor` from `YES` to `NO` in `X86PlatformPluginInjector.kext` fixed the issue of battery percentage not showing correctly (it doesn't sync with the data in HWMonitor), with the price that the built-in battery icon in menubar does NOT upgrade itself. I'm using iStat Menus as a workaround, which does upgrade the values (and displays the remaining time if you like) correctly.
     * Half-dimming the monitor when unplugged does not work properly on startup/reboot: the screen barely dims. A workaround is using execute a `pmset` command that doesn't really need to change any existing setting. The command I use is `sudo pmset -a ttyskeepawake 0`. I set it to execute on startups with a delay of 30 seconds with a modified [launchd-oneshot](https://github.com/cybertk/launchd-oneshot) , a shell script that makes it possible to execute scripts with superuser privilege on startup. It does automatic cleanup after the task is completed, which is not what I want, so I removed the code concerning cleanup in the shell script. 
+
+
