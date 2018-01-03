@@ -83,7 +83,7 @@ I have replaced this kext with `VoodooPS2Controller` due to stability issues. Th
 
 `VoodooPS2Controller` seems a little bit stabler and more responsive, but the scrolling and gesture support are far from satisfactory. Thus I'm using the touchscreen with a paid driver that supports native macOS gestures as a replacement.
 
-If you decided to use this over `VoodooPS2Controller`, replace `VoodooPS2Controller.kext` in the kext directory with `ApplePS2SmartTouchpad.kext`, which can be found in the POST-INSTALL.
+If you decided to use this over `VoodooPS2Controller` (which I recommend if you don't already have a mouse as Voodoo is not the most usable in terms of touchpad usability), replace `VoodooPS2Controller.kext` in the kext directory with `ApplePS2SmartTouchpad.kext`, which can be found in `POST-INSTALL`.
 
 ### Info
 The author of the kext seems to have postponed the development of this driver until the end of this year. This configuration uses Version 3.6 beta 5, which is the latest as of October 18 2018.
