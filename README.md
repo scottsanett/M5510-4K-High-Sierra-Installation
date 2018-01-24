@@ -131,16 +131,16 @@ I have known about the touchscreen drivers for macOS by touch-base for quite a w
 
 
 ## Issues <a name="issues"></a>
-1. __[Fixed]__ iTunes crashes frequently. 
+1. [__Fixed__] iTunes crashes frequently. 
     * The crashes do not happen at all with a fake ig-platform-id. 
     * I'm temporarily using Swinsian as an replacement (for music management, not iOS device manager).
-2. __[Rare]__ Random `fs_get_inode_with_hint` errors on reboot.
+2. [__Rare__] Random `fs_get_inode_with_hint` errors on reboot.
     * I've had this happened to me several times. I have no idea when and why this happens, but when it does, the fix is to replace apfs.efi in CLOVER with the one in the system. You may find your own `apfs.efi` in `/usr/standalone/i386`. 
     * It's best if you could have a bootable (and of course working) macOS installation on an external disk in case things like these happen. I personally created such one with Carbon Copy Cloner.
-3. __[Fixed]__ Bluetooth is semi-functional.
+3. [__Fixed__] Bluetooth is semi-functional.
     * It is possible to transfer files between devices (I specified file transfer as I've tested only that), but once one tries to turn it off, it not only stays on, but file transter stops working as well, which only a reboot can fix.
-4. __[Rare]__ The battery menubar icon does not appear on startup/reboot
+4. [__Occasional__] The battery menubar icon does not appear on startup/reboot
     * Changing `PublicBatteryFactor` from `YES` to `NO` in `X86PlatformPluginInjector.kext` fixed the issue of battery percentage not showing correctly (it doesn't sync with the data in HWMonitor), with the price that the built-in battery icon in menubar does NOT upgrade itself. I'm using iStat Menus as a workaround, which does upgrade the values (and displays the remaining time if you like) correctly.
     * Half-dimming the monitor when unplugged does not work properly on startup/reboot: the screen barely dims. A workaround is using execute a `pmset` command that doesn't really need to change any existing setting. The command I use is `sudo pmset -a ttyskeepawake 0`. I set it to execute on startups with a delay of 30 seconds with a modified [launchd-oneshot](https://github.com/cybertk/launchd-oneshot) , a shell script that makes it possible to execute scripts with superuser privilege on startup. It does automatic cleanup after the task is completed, which is not what I want, so I removed the code concerning cleanup in the shell script. 
-
+5. [__New__] After I upgraded the OS to 10.13.3 with `AppleBacklightInjector.kext` and `AppleGraphicsPolicyInjector` still in `/Library/Extensions`, the brightness keys stopped working and after a reboot I was unable to boot into the system with the error message "does printf work??". I had to go into recovery mode, delete the two kexts in /L/E and rebuild kernel cache. At the end of the rebuild I got an error message stating that a syslink could not be created because a file under `/System/Library/Caches` could not be found. I created the file (along with the directories containing it) and rebuilt again, and after that I was able to boot into the system. I then installed the kexts into /L/E and rebuilt kernel cache with kext utility, but I was again unable to reboot and was stuck at the same error. I had to delete the kexts and rebuilt kernel cache to make it bootable. The brightness function keys now work, but with limited range of brightness, which isn't a problem for me so I leaved the kexts uninstalled. It is not clear which one of the two (or both) is the culprit.  
 
