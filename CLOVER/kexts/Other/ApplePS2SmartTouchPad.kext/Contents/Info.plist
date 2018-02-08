@@ -821,7 +821,7 @@
 					<key>EnhancedAccelerationMinDelta</key>
 					<integer>15</integer>
 					<key>HIDTrackpadAccelLevel</key>
-					<integer>7</integer>
+					<integer>8</integer>
 					<key>PointerCustomAcceleration</key>
 					<dict>
 						<key>ELANv2</key>
@@ -848,7 +848,7 @@
 						<key>MouseMode</key>
 						<integer>800</integer>
 						<key>Synaptics</key>
-						<integer>1600</integer>
+						<integer>2400</integer>
 					</dict>
 					<key>PointerSmoothLevel</key>
 					<integer>7</integer>
@@ -991,7 +991,7 @@
 					<key>InertialScrollDepth</key>
 					<integer>3</integer>
 					<key>NoInertiaForHScroll</key>
-					<true/>
+					<false/>
 					<key>ScrollAccelDelay</key>
 					<integer>1</integer>
 					<key>ScrollDirectionSamples</key>
@@ -1117,7 +1117,7 @@
 						<key>Synaptics</key>
 						<integer>50</integer>
 						<key>SynapticsClickPad</key>
-						<integer>40</integer>
+						<integer>50</integer>
 					</dict>
 					<key>1FingerTapAction</key>
 					<integer>35</integer>
