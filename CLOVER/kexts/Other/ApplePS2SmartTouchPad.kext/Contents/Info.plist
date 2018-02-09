@@ -1048,7 +1048,7 @@
 				<key>Swiping</key>
 				<dict>
 					<key>3FingerSwipeDownAction</key>
-					<integer>0</integer>
+					<integer>28</integer>
 					<key>3FingerSwipeLeftAction</key>
 					<integer>12</integer>
 					<key>3FingerSwipeRightAction</key>
