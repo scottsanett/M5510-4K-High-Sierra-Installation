@@ -673,7 +673,7 @@
 					<key>3FingersPressAction</key>
 					<integer>0</integer>
 					<key>4FingersPressAction</key>
-					<integer>25</integer>
+					<integer>28</integer>
 					<key>5FingersPressAction</key>
 					<integer>5</integer>
 					<key>FingersPressTimeOut</key>
@@ -1048,7 +1048,7 @@
 				<key>Swiping</key>
 				<dict>
 					<key>3FingerSwipeDownAction</key>
-					<integer>28</integer>
+					<integer>0</integer>
 					<key>3FingerSwipeLeftAction</key>
 					<integer>12</integer>
 					<key>3FingerSwipeRightAction</key>
