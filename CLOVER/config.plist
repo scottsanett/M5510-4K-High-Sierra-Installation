@@ -588,7 +588,7 @@
 		<key>Log</key>
 		<false/>
 		<key>NeverHibernate</key>
-		<false/>
+		<true/>
 		<key>NoEarlyProgress</key>
 		<true/>
 		<key>Secure</key>
