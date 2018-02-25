@@ -547,13 +547,13 @@
 			</dict>
 			<dict>
 				<key>Signature</key>
-				<string>BGRP</string>
+				<string>#MCFG</string>
 			</dict>
 			<dict>
 				<key>Signature</key>
 				<string>SSDT</string>
 				<key>TableId</key>
-				<string>xh_rvp10</string>
+				<string>Cpu0Ist</string>
 			</dict>
 		</array>
 		<key>ResetAddress</key>
@@ -578,17 +578,23 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 darkwake=no nv_disable=1 kext-dev-mode=1 abm_firstpolldelay=16000 slide=128</string>
+		<string>dart=0 darkwake=0 nv_disable=1 kext-dev-mode=1 debug=0x100</string>
 		<key>DefaultVolume</key>
 		<string>Macintosh HD</string>
+		<key>Fast</key>
+		<true/>
+		<key>HibernationFixup</key>
+		<false/>
 		<key>Log</key>
 		<false/>
 		<key>NeverHibernate</key>
+		<false/>
+		<key>NoEarlyProgress</key>
 		<true/>
 		<key>Secure</key>
 		<false/>
-		<key>Timeout</key>
-		<integer>2</integer>
+		<key>StrictHibernate</key>
+		<false/>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
@@ -604,7 +610,7 @@
 		<key>HWPEnable</key>
 		<true/>
 		<key>UseARTFrequency</key>
-		<false/>
+		<true/>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -871,6 +877,8 @@
 				<data>
 				AQAAdSI=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>MatchOS</key>
 				<string>10.13.x</string>
 				<key>Name</key>
@@ -889,6 +897,8 @@
 				<data>
 				AEFQUExFIFNTRAA=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Replace</key>
@@ -905,6 +915,8 @@
 				<data>
 				AAAIAAIAAACYAAAAAQUJAAAEAAA=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Replace</key>
@@ -935,6 +947,8 @@
 				<data>
 				VUiJ5UFXQVZBVUFUU0iB7DgB
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>MatchOS</key>
 				<string>10.12.x</string>
 				<key>Name</key>
@@ -953,6 +967,8 @@
 				<data>
 				RiV1VCUwNHgA
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleBacklight</string>
 				<key>Replace</key>
@@ -968,41 +984,33 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
-		<key>MLB</key>
-		<string>C02420304DCFJYL14</string>
-		<key>ROM</key>
-		<data>
-		KAtcUrNi
-		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>08/08/2017</string>
+		<string>12/21/2017</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP133.88Z.0233.B00.1708080034</string>
+		<string>IM171.88Z.0148.B00.1712211710</string>
 		<key>Board-ID</key>
-		<string>Mac-A5C67F76ED83108C</string>
+		<string>Mac-B809C3757DA9BB8D</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string>C02420304DCFJYL14</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
 		<string>1.0</string>
 		<key>ChassisAssetTag</key>
-		<string>MacBook-Aluminum</string>
+		<string>iMac-Aluminum</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>Family</key>
-		<string>MacBook Pro</string>
+		<string>iMac17,1</string>
 		<key>FirmwareFeatures</key>
-		<string>0xFC0FE13E</string>
+		<string>0xFC0FE137</string>
 		<key>FirmwareFeaturesMask</key>
 		<string>0xFF1FFF3F</string>
 		<key>LocationInChassis</key>
@@ -1012,22 +1020,16 @@
 		<key>Mobile</key>
 		<true/>
 		<key>PlatformFeature</key>
-		<string>0x1A</string>
+		<string>0x00</string>
 		<key>ProductName</key>
-		<string>MacBookPro13,3</string>
-		<key>SerialNumber</key>
-		<string>C02MQ60QFGYY</string>
-		<key>SmUUID</key>
-		<string>6CFE5564-2280-58EC-B0A9-A8F9BE5EE6EF</string>
+		<string>iMac17,1</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
-		<key>CustomUUID</key>
-		<string>52D5EB8C-2E10-F25F-912B-5613F35861FB</string>
 		<key>InjectKexts</key>
-		<string>Detect</string>
+		<string>Yes</string>
 		<key>InjectSystemID</key>
 		<true/>
 	</dict>
