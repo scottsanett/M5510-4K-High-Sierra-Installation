@@ -41,6 +41,7 @@ sudo touch /System/Library/Extensions && sudo kextcache -u /
 ```
 
 ### Not Working:
+* hibernation
 * *see also* [Issues](#issues)
 
 Things that are not listed here have not been tested.
