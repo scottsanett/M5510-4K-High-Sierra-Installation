@@ -673,7 +673,7 @@
 					<key>3FingersPressAction</key>
 					<integer>0</integer>
 					<key>4FingersPressAction</key>
-					<integer>25</integer>
+					<integer>28</integer>
 					<key>5FingersPressAction</key>
 					<integer>5</integer>
 					<key>FingersPressTimeOut</key>
@@ -716,7 +716,7 @@
 					<key>CircularRotate</key>
 					<false/>
 					<key>DisableTPadOnLIDClose</key>
-					<true/>
+					<false/>
 					<key>MaxTouchEndDelta</key>
 					<dict>
 						<key>ELANv2</key>
@@ -764,9 +764,9 @@
 						<key>FocalTech</key>
 						<integer>200</integer>
 						<key>Synaptics</key>
-						<integer>100</integer>
+						<integer>150</integer>
 						<key>SynapticsClickPad</key>
-						<integer>100</integer>
+						<integer>150</integer>
 					</dict>
 					<key>PalmCheckMinWidth</key>
 					<dict>
@@ -781,12 +781,12 @@
 						<key>FocalTech</key>
 						<integer>10</integer>
 						<key>Synaptics</key>
-						<integer>5</integer>
+						<integer>9</integer>
 						<key>SynapticsClickPad</key>
-						<integer>5</integer>
+						<integer>9</integer>
 					</dict>
 					<key>PalmDetection</key>
-					<true/>
+					<false/>
 					<key>PinchDeltaScale</key>
 					<integer>3</integer>
 					<key>PinchRotateMinSamples</key>
@@ -817,11 +817,11 @@
 					<key>DisableTrackPointButton</key>
 					<true/>
 					<key>EnhancedAccelerationLevel</key>
-					<integer>1</integer>
+					<integer>0</integer>
 					<key>EnhancedAccelerationMinDelta</key>
 					<integer>15</integer>
 					<key>HIDTrackpadAccelLevel</key>
-					<integer>7</integer>
+					<integer>8</integer>
 					<key>PointerCustomAcceleration</key>
 					<dict>
 						<key>ELANv2</key>
@@ -848,7 +848,7 @@
 						<key>MouseMode</key>
 						<integer>800</integer>
 						<key>Synaptics</key>
-						<integer>1600</integer>
+						<integer>2400</integer>
 					</dict>
 					<key>PointerSmoothLevel</key>
 					<integer>7</integer>

@@ -147,6 +147,8 @@
 			<string>ApplePS2KeyboardDevice</string>
 			<key>Keyboard type (ID)</key>
 			<integer>0</integer>
+			<key>ProductID</key>
+			<integer>782</integer>
 			<key>Preferences</key>
 			<dict>
 				<key>Disable Num Lock LED</key>
@@ -180,8 +182,6 @@
 				<key>Swap alt and windows key</key>
 				<true/>
 			</dict>
-			<key>ProductID</key>
-			<integer>782</integer>
 			<key>Use ISO Layout</key>
 			<false/>
 			<key>VendorID</key>
