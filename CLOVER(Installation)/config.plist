@@ -8,13 +8,13 @@
 		<dict>
 			<key>Fixes</key>
 			<dict>
-				<key>FIX_RTC_20000</key>
+				<key>FixHeaders</key>
 				<true/>
-				<key>FIX_TMR_40000</key>
+				<key>FixIPIC</key>
 				<true/>
-				<key>FixHeaders_20000000</key>
+				<key>FixRTC</key>
 				<true/>
-				<key>FixIPIC_0040</key>
+				<key>FixTMR</key>
 				<true/>
 			</dict>
 			<key>Patches</key>
@@ -596,7 +596,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v dart=0 nv_disable=1 kext-dev-mode=1 slide=144</string>
+		<string>nv_disable=1 dart=0 kext-dev-mode=1 -v slide=144</string>
 		<key>DefaultVolume</key>
 		<string>High Sierra</string>
 		<key>Legacy</key>
@@ -849,6 +849,8 @@
 				<data>
 				AEFQUExFIFNTRAA=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Replace</key>
@@ -879,6 +881,8 @@
 				<data>
 				VUiJ5UFXQVZBVUFUU0iB7DgB
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>MatchOS</key>
 				<string>10.12.x</string>
 				<key>Name</key>
@@ -897,6 +901,8 @@
 				<data>
 				RiV1VCUwNHgA
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleBacklight</string>
 				<key>Replace</key>
@@ -913,6 +919,8 @@
 				<data>
 				AAAIAAIAAACYAAAAAQUJAAAEAAA=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Replace</key>
@@ -929,6 +937,8 @@
 				<data>
 				AQAAdSI=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>MatchOS</key>
 				<string>10.13.x</string>
 				<key>Name</key>
@@ -947,6 +957,8 @@
 				<data>
 				gflSqgAAdSk=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>MatchOS</key>
 				<string>10.12.x</string>
 				<key>Name</key>
@@ -965,6 +977,8 @@
 				<data>
 				SIX/dEdIiwc=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>MatchOS</key>
 				<string>10.11.x,10.12.x</string>
 				<key>Name</key>
@@ -983,6 +997,8 @@
 				<data>
 				QcYGAEiLu2g=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
@@ -999,6 +1015,8 @@
 				<data>
 				QcaGQwEAAAA=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
@@ -1015,6 +1033,8 @@
 				<data>
 				hQjsEA==
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
@@ -1031,6 +1051,8 @@
 				<data>
 				hBnUEQ==
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
@@ -1046,12 +1068,6 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
-		<key>MLB</key>
-		<string>C02420304DCFJYL14</string>
-		<key>ROM</key>
-		<data>
-		KAtcUrNi
-		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -1066,7 +1082,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02420304DCFJYL14s</string>
+		<string>C02428404QXF9H11H</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -1088,16 +1104,12 @@
 		<key>ProductName</key>
 		<string>MacBookPro11,1</string>
 		<key>SerialNumber</key>
-		<string>C02MQ60QFGYY</string>
-		<key>SmUUID</key>
-		<string>6CFE5564-2280-58EC-B0A9-A8F9BE5EE6EF</string>
+		<string>C02N2YVYFH00</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
-		<key>CustomUUID</key>
-		<string>52D5EB8C-2E10-F25F-912B-5613F35861FB</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
