@@ -8,14 +8,12 @@
 		<dict>
 			<key>Fixes</key>
 			<dict>
-				<key>FixHeaders</key>
-				<true/>
+				<key>FixHPET</key>
+				<false/>
 				<key>FixIPIC</key>
 				<true/>
 				<key>FixRTC</key>
 				<true/>
-				<key>FixShutdown</key>
-				<false/>
 				<key>FixTMR</key>
 				<true/>
 			</dict>
@@ -594,6 +592,10 @@
 				<string>xh_rvp10</string>
 			</dict>
 		</array>
+		<key>FixHeaders</key>
+		<true/>
+		<key>HaltEnabler</key>
+		<false/>
 		<key>ResetAddress</key>
 		<string>0xB2</string>
 		<key>ResetValue</key>
@@ -602,25 +604,33 @@
 		<dict>
 			<key>DropOem</key>
 			<false/>
+			<key>EnableC2</key>
+			<false/>
+			<key>EnableC4</key>
+			<false/>
+			<key>EnableC6</key>
+			<false/>
+			<key>EnableC7</key>
+			<false/>
 			<key>Generate</key>
 			<dict>
 				<key>CStates</key>
 				<false/>
 				<key>PStates</key>
 				<false/>
+				<key>PluginType</key>
+				<true/>
 			</dict>
 			<key>PluginType</key>
-			<integer>1</integer>
+			<string>1</string>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>nv_disable=1 dart=0 darkwake=0 kext-dev-mode=1 brcmfx-country=#a</string>
+		<string>dart=0 nv_disable=1 slide=128 -v brcmfx-country=#a darkwake=no kext-dev-mode=1</string>
 		<key>DefaultVolume</key>
 		<string>Macintosh HD</string>
-		<key>HibernationFixup</key>
-		<false/>
 		<key>Log</key>
 		<false/>
 		<key>NeverHibernate</key>
@@ -629,10 +639,8 @@
 		<true/>
 		<key>Secure</key>
 		<false/>
-		<key>StrictHibernate</key>
-		<false/>
 		<key>Timeout</key>
-		<integer>1</integer>
+		<integer>5</integer>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
@@ -645,16 +653,12 @@
 	</dict>
 	<key>CPU</key>
 	<dict>
-		<key>C2</key>
-		<false/>
 		<key>C4</key>
-		<true/>
+		<false/>
 		<key>C6</key>
-		<true/>
+		<false/>
 		<key>HWPEnable</key>
-		<true/>
-		<key>HWPValue</key>
-		<string>0x94002401</string>
+		<false/>
 		<key>UseARTFrequency</key>
 		<false/>
 	</dict>
@@ -854,13 +858,9 @@
 			<true/>
 			<key>Legacy</key>
 			<false/>
-			<key>Linux</key>
-			<true/>
 			<key>Tool</key>
 			<true/>
 		</dict>
-		<key>TextOnly</key>
-		<false/>
 		<key>Theme</key>
 		<string>BGM</string>
 	</dict>
@@ -869,7 +869,7 @@
 		<key>EDID</key>
 		<dict>
 			<key>Inject</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Inject</key>
 		<dict>
@@ -888,7 +888,7 @@
 		<key>AppleRTC</key>
 		<true/>
 		<key>DellSMBIOSPatch</key>
-		<false/>
+		<true/>
 		<key>ForceKextsToLoad</key>
 		<array>
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
@@ -914,8 +914,30 @@
 				</data>
 			</dict>
 		</array>
+		<key>KernelXCPM</key>
+		<false/>
 		<key>KextsToPatch</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>1536MB -&gt; 2048MB for HD520_530_540 Mobile</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AQMDAwAAIAIAAFABAAAAYA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.13.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>
+				AQMDAwAAIAIAAFABAAAAgA==
+				</data>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Boot graphics glitch, 10.13 beta (based on denskop patch)</string>
@@ -934,24 +956,6 @@
 				<key>Replace</key>
 				<data>
 				AQAA6yI=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Enable TRIM for SSD</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AEFQUExFIFNTRAA=
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.iokit.IOAHCIBlockStorage</string>
-				<key>Replace</key>
-				<data>
-				AAAAAAAAAAAAAAA=
 				</data>
 			</dict>
 			<dict>
@@ -1036,11 +1040,11 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>12/19/2017</string>
+		<string>02/08/2018</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP133.88Z.0238.B00.1712190202</string>
+		<string>MBP133.88Z.0242.B00.1802080916</string>
 		<key>Board-ID</key>
 		<string>Mac-A5C67F76ED83108C</string>
 		<key>BoardManufacturer</key>
