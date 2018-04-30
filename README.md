@@ -29,8 +29,6 @@ You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS
 * Display brightness
 * HWP, with CPU frequency as low as 900MHz.
 
-> For the last one to work, install the kext in POST-INSTALL/LE to /Library/Extensions/ and rebuild kernel cache with ```sudo kextcache -i /```.
-
 
 ### Not Working:
 * hibernation
