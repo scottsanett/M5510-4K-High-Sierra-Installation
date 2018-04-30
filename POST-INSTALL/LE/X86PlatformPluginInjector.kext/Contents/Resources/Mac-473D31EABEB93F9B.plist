@@ -120,40 +120,6 @@
 		<false/>
 		<key>DNDWhileDisplaySleeps</key>
 		<false/>
-		<key>DarkWakeServices</key>
-		<dict>
-			<key>DarkWakeBackgroundTasks</key>
-			<integer>1</integer>
-			<key>SleepServices</key>
-			<integer>7</integer>
-			<key>SleepServicesModes</key>
-			<dict>
-				<key>ModeA</key>
-				<dict>
-					<key>Expiration</key>
-					<integer>0</integer>
-					<key>BatteryFloor</key>
-					<integer>0</integer>
-					<key>BaseIntervals</key>
-					<dict>
-						<key>AC</key>
-						<dict>
-							<key>BaseSleepInterval</key>
-							<integer>3600</integer>
-							<key>BaseWakeCapInterval</key>
-							<integer>86400</integer>
-						</dict>
-						<key>Battery</key>
-						<dict>
-							<key>BaseSleepInterval</key>
-							<integer>3600</integer>
-							<key>BaseWakeCapInterval</key>
-							<integer>180</integer>
-						</dict>
-					</dict>
-				</dict>
-			</dict>
-		</dict>
 		<key>power_reduced_playback</key>
 		<true/>
 		<key>thermally_optimized_xcode</key>
