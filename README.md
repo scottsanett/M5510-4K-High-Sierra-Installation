@@ -2,15 +2,12 @@
 
 This repository is based on [wmchris' high sierra repo](https://github.com/wmchris/DellXPS15-9550-OSX) for XPS15 9550.
 
-
-The BIOS version for my laptop is 1.5.0 (the latest as of Dec 20 2017 on Dell's website), hence OsxAptioFix**2**Drv-64.efi and slider value calculations are necessay to boot into the installer and the OS.
-
-
 You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS15-9550-High-Sierra/blob/master/README.md) for calculating slider values. 
 
 
 ## Directory Info
 * CLOVER: clover configuration files for daily usage
+    * This configuration does NOT contain apfs.efi necessary for those who use APFS.
 * POST-INSTALL: files needed for post-installation set-ups.
 
 
@@ -32,7 +29,7 @@ You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS
 * Display brightness
 * HWP, with CPU frequency as low as 900MHz.
 
-> For the last two, install the two kexts in POST-INSTALL/LE to /Library/Extensions/ and rebuild kernel cache with the bash script below.
+> For the last one to work, install the kext in POST-INSTALL/LE to /Library/Extensions/ and rebuild kernel cache with the bash script below.
 
 ```
 sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache  
@@ -60,75 +57,6 @@ sudo codesign -f -s - /System/Library/Frameworks/CoreDisplay.framework/Versions/
 ```
 
 4. reboot with a valid ig-platform-id in Clover, e.g. `0x191b0000`
-
-
-## Concerning `X86PlatformPluginInjector` and darkwake
-For some reasons the OS has been having problems with sleeping. (It's not necessarily a problem with High Sierra. It might have been there since Sierra.) It sporadically wakes itself up (without lighting up the monitor), sometimes it doesn't sleep at all. My guess is that it has something to do with darkwake, and since I don't need it anyway, I might as well disable it altogether. 
-
-The new `X86PlatformPluginInjector.kext` contains a `Mac-A5C67F76ED83108C.plist` under `contents/resources/` that has been taken directly from `/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext` with the following modifications:
-* Under `FrequenciesVectors`, I changed the second hex from `0d000000` to `09000000` to enable a lowest frequency rate at 900MHz. The value differs for different CPU models and needs to be changed accordingly.
-* `Nofication Wake` has been changed from `YES` to `NO`;
-* `DarkwakeServices` has been removed.
-* `pmset` settings:
-	* `hibernatemode` set to 0
-	* `ttyskeepawake` set to 0
-	* `tcpkeepalive` set to 0
-
-
-## Concerning `ApplePS2SmartTouchpad.kext`
-### Update
-I have replaced this kext with `VoodooPS2Controller` due to stability issues. This kext is more feature-rich and has better support for scrolling, but its debugged nature floods the Console and it seems buggy in the following aspects:
-
-1. the keyboard is stuck (having to wait a few seconds to be able to input anything) during caps switch after a few days of not rebooting the machine; this can be (temporarily) fixed by sleeping.
-2. if you attempt to clean the touchpad and mop all over it with the machine still awake, the touchpad stops working altogether; only a reboot is able to fix this.
-
-`VoodooPS2Controller` seems a little bit stabler and more responsive, but the scrolling and gesture support are far from satisfactory. Thus I'm using the touchscreen with a paid driver that supports native macOS gestures as a replacement.
-
-If you decided to use this over `VoodooPS2Controller` (which I recommend if you don't already have a mouse as Voodoo is not the most usable in terms of touchpad usability), replace `VoodooPS2Controller.kext` in the kext directory with `ApplePS2SmartTouchpad.kext`, which can be found in `POST-INSTALL`.
-
-### Info
-The author of the kext seems to have postponed the development of this driver until the end of this year. This configuration uses Version 3.6 beta 5, which is the latest as of October 18 2018.
-
-The kext has been modified and tuned for a better usability, as some of the gestures are frequently misinterpreted.
-
-The kext now supports these gestures:
-### Click
-* bottom click: middle click
-* 1 finger click: left lick
-* 2 finger click: right click
-* 3 finger click: preview (files, webpages, look up words in dictionary)
-* 4 finger click: hide current window
-* 5 finger click: close current window (or current tab in multi-tab applications, might crash Safari as well)
-
-### Pinch
-* 5 finger pinch: quit application
-
-### Press
-* 4 finger press: show application windows
-* 5 finger press: show launchpad (keyboard shortcut for Show Launchpad needs to be mapped to F12)
-(3 finger press weirdly doesn't work in this version on my laptop)
-
-### Swipe
-* 3 finger swipe left: web browser goes forward
-* 3 finger swipe right: web browser goes backward
-* 4 finger swipe left: go to next desktop
-* 4 finger swipe right: go to previous desktop
-* 4 finger swipe up: maximum window
-* 4 finger swipe down: minimize window
-
-### Edge Swipe
-* right edge swipe left: notification center (keyboard shortcut for `Show Notification Center` needs to be mapped to CTRL CMD N)
-* left edge swipe right: application switcher
-* top edge swipe down: mission control
-* bottom edge swipe up: show desktop
-
-### Rotation
-Due to the limitation of the kext itself, the gesture doesn't look like a rotation. For it to work, one needs to set a finger (I'd suggest using index as it's easier) on the touchpad, and flick the middle or the ring finger, up for left rotation, down for right rotation.
-Rotations are mapped to `CMD + L` and `CMD + R`, hence right rotation refreshes webpages in browsers.
-
-
-### An Alternative Solution to Touchpad Kexts
-I have known about the touchscreen drivers for macOS by touch-base for quite a while and yesterday I decided to give it a try. The driver enables multi-touch support for the touchscreen (macOS supports only single touch natively and it works like a mouse so no surprise there), and it allows personalizations for many gestures that call macOS APIs (pinch zooms, smart zooms, smooth scrolling, rotation, switching between fullscreen apps/show launchpad/show desktop/etc. animation that follows the fingers rather than a workaround that invokes the corresponding keyboard shortcut, etc.), which no touchpad kext that I know of is capable of doing. It is by no means cheap ($105 for a home license), but it works well. This could be a solution for those unsatisfied with all the touchpad kexts available as it provides a native macOS trackpad feel. [demo(YouTube)](https://www.youtube.com/watch?v=rOvU1TdL2-8)
 
 
 ## Issues <a name="issues"></a>
