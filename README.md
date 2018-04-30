@@ -29,13 +29,8 @@ You may refer to [darkhandz's Chinese tutorial](https://github.com/darkhandz/XPS
 * Display brightness
 * HWP, with CPU frequency as low as 900MHz.
 
-> For the last one to work, install the kext in POST-INSTALL/LE to /Library/Extensions/ and rebuild kernel cache with the bash script below.
+> For the last one to work, install the kext in POST-INSTALL/LE to /Library/Extensions/ and rebuild kernel cache with ```sudo kextcache -i /```.
 
-```
-sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache  
-sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel  
-sudo touch /System/Library/Extensions && sudo kextcache -u /
-```
 
 ### Not Working:
 * hibernation
@@ -45,7 +40,7 @@ Things that are not listed here have not been tested.
 
 
 ## Fix for 4K:
-__This has already been achieved by using `CoreDisplayFixup.kext` and `Lilu.kext` (both included in the repo). Plus, the kexts don't break copy && paste, while the patch below does.__ 
+__This has already been achieved by using `CoreDisplayFixup.kext` and `Lilu.kext` (both included in the repo).__ 
 
 1. boot the installer with an invalid ig-platform-id in Clover, e.g. `0x12345678`
 2. after the system is installed, disable SIP if necessary
@@ -60,15 +55,10 @@ sudo codesign -f -s - /System/Library/Frameworks/CoreDisplay.framework/Versions/
 
 
 ## Issues <a name="issues"></a>
-1. [__Fixed__] iTunes crashes frequently. 
-    * The crashes do not happen at all with a fake ig-platform-id. 
-    * I'm temporarily using Swinsian as an replacement (for music management, not iOS device manager).
-2. [__Rare__] Random `fs_get_inode_with_hint` errors on reboot.
+1. [__Rare__] Random `fs_get_inode_with_hint` errors on reboot.
     * I've had this happened to me several times. I have no idea when and why this happens, but when it does, the fix is to replace apfs.efi in CLOVER with the one in the system. You may find your own `apfs.efi` in `/usr/standalone/i386`. 
     * It's best if you could have a bootable (and of course working) macOS installation on an external disk in case things like these happen. I personally created such one with Carbon Copy Cloner.
-3. [__Fixed__] Bluetooth is semi-functional.
-    * It is possible to transfer files between devices (I specified file transfer as I've tested only that), but once one tries to turn it off, it not only stays on, but file transter stops working as well, which only a reboot can fix.
-4. [__Occasional__] The battery menubar icon does not appear on startup/reboot
+2. [__Occasional__] The battery menubar icon does not appear on startup/reboot
     * Changing `PublicBatteryFactor` from `YES` to `NO` in `X86PlatformPluginInjector.kext` fixed the issue of battery percentage not showing correctly (it doesn't sync with the data in HWMonitor), with the price that the built-in battery icon in menubar does NOT upgrade itself. I'm using iStat Menus as a workaround, which does upgrade the values (and displays the remaining time if you like) correctly.
     * Half-dimming the monitor when unplugged does not work properly on startup/reboot: the screen barely dims. A workaround is using execute a `pmset` command that doesn't really need to change any existing setting. The command I use is `sudo pmset -a ttyskeepawake 0`. I set it to execute on startups with a delay of 30 seconds with a modified [launchd-oneshot](https://github.com/cybertk/launchd-oneshot) , a shell script that makes it possible to execute scripts with superuser privilege on startup. It does automatic cleanup after the task is completed, which is not what I want, so I removed the code concerning cleanup in the shell script. 
 
